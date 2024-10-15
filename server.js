@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const allowedOrigins = [
-  "https://my-daily-task-dun.vercel.app/", // Production frontend
+  "https://my-daily-task-dun.vercel.app", // Production frontend
   "http://localhost:5173", // Local development
 ];
 
