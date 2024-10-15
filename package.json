@@ -2,7 +2,7 @@
   "name": "todo-app-backend",
   "version": "1.0.0",
   "proxy": "http://localhost:5000",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
