@@ -8,7 +8,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Specify your frontend URL
+const frontendUrl = "https://my-daily-task-dun.vercel.app/";
+app.use(cors({ origin: frontendUrl }));
 app.use(express.json());
 
 app.use("/tasks", apiTasks);
