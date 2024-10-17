@@ -10,6 +10,7 @@ router.get("/", async (req, res) => {
     const [rows] = await db.query("SELECT * FROM tasks");
     res.status(200).json(rows);
   } catch (error) {
+    console.error("Error fetching tasks:", error);
     res.status(500).json({ error: error.message });
   }
 });

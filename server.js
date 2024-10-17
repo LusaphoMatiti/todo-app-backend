@@ -15,6 +15,10 @@ app.use(
     origin: "https://my-daily-task-dun.vercel.app",
   })
 );
+
+// Handle pre-flight requests
+app.options("*", cors());
+
 app.use(express.json());
 
 app.use("/tasks", apiTasks);
