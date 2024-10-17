@@ -10,8 +10,4 @@ const db = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
-// Optionally, run a simple query
-const [results] = await db.query("SELECT 1");
-console.log("Database query successful:", results);
-
 export default db;
