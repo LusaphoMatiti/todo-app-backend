@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://my-daily-task-dun.vercel.app",
   })
 );
 app.use(express.json());
@@ -22,3 +22,6 @@ app.use("/tasks", apiTasks);
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
 });
+
+// netstat -ano | findstr :PORT_NUMBER
+// taskkill /PID 11288 /F
