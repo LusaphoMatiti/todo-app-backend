@@ -14,6 +14,10 @@ app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Todo API!"); // Response for root URL
+});
+
 app.use("/tasks", apiTasks);
 
 app.listen(PORT, () => {
