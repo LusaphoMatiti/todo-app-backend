@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // Specify your frontend URL
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 
