@@ -10,14 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // Specify your frontend URL
 
-app.use(
-  cors({
-    origin: "https://my-daily-task-dun.vercel.app",
-  })
-);
-
-// Handle pre-flight requests
-app.options("*", cors());
+app.use(cors());
 
 app.use(express.json());
 
